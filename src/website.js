@@ -25,7 +25,7 @@ function createNav() {
         loadInbox();
     })
     */
-   
+
     return nav;
 }
 
