@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+:root{
+
+}
+
+header{
+    outline: red solid 1px;
+}
+
+.header h1{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: crimson;
+    
+    height: max(50px,10vh)
+}
+
+.main-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+nav{
+    display: flex;
+    
+    background-color: grey;
+    width: max(10vh,150px);
+    height: 80vh;
+}
+footer{
+    background-color: black;
+    height: max(50px,10vh)
+}

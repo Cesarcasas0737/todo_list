@@ -1,3 +1,5 @@
+import loadInbox from "./inbox";
+
 function createHeader() {
     const header = document.createElement("header");
     header.classList.add("header");
@@ -18,15 +20,16 @@ function createNav() {
     inboxButton.classList.add("button-nav");
     inboxButton.textContent = "Inbox";
 
-    /*
+    
     inboxButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
         setActiveButton(inboxButton);
         loadInbox();
     })
-    */
+    
+   nav.appendChild(inboxButton);
 
-    return nav;
+   return nav;
 }
 
 function setActiveButton(button) {
@@ -71,6 +74,9 @@ function initializeWebsite() {
     content.appendChild(createHeader());
     content.appendChild(createMainWrapper());
     content.appendChild(createFooter());
+
+    setActiveButton(document.querySelector(".button-nav"));
+    loadInbox();
 }
 
 export default initializeWebsite;
