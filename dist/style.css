@@ -3,8 +3,21 @@
     padding: 0;
     font-family: 'Roboto Slab', serif;
 }
-:root{
 
+button {
+    all: unset;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    height: 40px;
+}
+
+:root{
+    --primary-color: #db4c3f;
+    --secondy-color: #e27065;
+    --light-grey:#fafafa;
+    --grey:#eeeeee;
+    --white: #ffffff;
 }
 
 header{
@@ -15,9 +28,9 @@ header{
     display: flex;
     align-items: center;
     padding-left: 20px;
-    background-color: crimson;
+    background-color: var(--primary-color);
     
-    height: max(50px,10vh)
+    height: max(3vh,8px);
 }
 
 .main-wrapper{
@@ -27,12 +40,34 @@ header{
 
 nav{
     display: flex;
-    
-    background-color: grey;
-    width: max(10vh,150px);
-    height: 80vh;
+    flex-direction: column;
+    background-color: var(--light-grey);
+    width: max(10vh,250px);
+    height: 92vh;
+}
+
+.deafult-projects{
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.users-projects{
+    height: 50vh;
+    overflow-y:auto;
+}
+
+.deafult-projects .button-nav{
+    color: black;
+    border-radius: 5px;
+}
+.button-nav:hover{
+    background-color: var(--grey);
 }
 footer{
     background-color: black;
-    height: max(50px,10vh)
+    height: max(50px,5vh)
 }

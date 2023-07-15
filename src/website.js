@@ -16,18 +16,27 @@ function createHeader() {
 function createNav() {
     const nav = document.createElement("nav");
 
+    const defaultProjects = document.createElement("div");
+    defaultProjects.classList.add("deafult-projects");
+    nav.appendChild(defaultProjects);
+
     const inboxButton = document.createElement("button");
     inboxButton.classList.add("button-nav");
     inboxButton.textContent = "Inbox";
-
     
     inboxButton.addEventListener("click", (e) => {
         if (e.target.classList.contains("active")) return;
         setActiveButton(inboxButton);
         loadInbox();
     })
+
+    const usersProjects = document.createElement("div");
+    usersProjects.classList.add("users-projects");
+    nav.appendChild(usersProjects);
+
     
-   nav.appendChild(inboxButton);
+    
+   defaultProjects.appendChild(inboxButton);
 
    return nav;
 }
