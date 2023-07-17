@@ -48,7 +48,7 @@ nav{
     height: 92vh;
 }
 
-.deafult-projects{
+.deafult-projects,.users-projects{
     display: flex;
     flex-direction: column;
     height: 30vh;
@@ -66,9 +66,14 @@ nav{
     color: black;
     border-radius: 5px;
 }
-.button-nav:hover{
+.users-projects .button-nav{
+    color: black;
+    border-radius: 5px;
+}
+.button-nav:hover,.active{
     background-color: var(--grey);
 }
+
 footer{
     background-color: black;
     height: max(50px,5vh)

@@ -1,6 +1,7 @@
 import loadInbox from "./inbox";
 import loadToday from "./today";
 import loadWeek from "./week";
+import loadProject from "./project";
 
 function createHeader() {
     const header = document.createElement("header");
@@ -52,16 +53,26 @@ function createNav() {
         loadWeek();
     })
 
+    const projectButton = document.createElement("button");
+    projectButton.classList.add("button-nav");
+    projectButton.textContent = "Project";
+
+    projectButton.addEventListener("click", (e) => {
+        if (e.target.classList.contains("active")) return;
+        setActiveButton(projectButton);
+        loadProject();
+    })
 
 
     const usersProjects = document.createElement("div");
     usersProjects.classList.add("users-projects");
+    usersProjects.appendChild(projectButton);
     nav.appendChild(usersProjects);
 
     defaultProjects.appendChild(inboxButton);
     defaultProjects.appendChild(todayButton);
     defaultProjects.appendChild(weekButton);
-   return nav;
+    return nav;
 }
 
 function setActiveButton(button) {
