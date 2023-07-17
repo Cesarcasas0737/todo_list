@@ -1,4 +1,5 @@
 import loadInbox from "./inbox";
+import loadToday from "./today";
 
 function createHeader() {
     const header = document.createElement("header");
@@ -19,7 +20,7 @@ function createNav() {
     const defaultProjects = document.createElement("div");
     defaultProjects.classList.add("deafult-projects");
     nav.appendChild(defaultProjects);
-
+//
     const inboxButton = document.createElement("button");
     inboxButton.classList.add("button-nav");
     inboxButton.textContent = "Inbox";
@@ -29,15 +30,23 @@ function createNav() {
         setActiveButton(inboxButton);
         loadInbox();
     })
+    //
+    const todayButton = document.createElement("button");
+    todayButton.classList.add("button-nav");
+    todayButton.textContent = "Today";
+
+    todayButton.addEventListener("click", (e) => {
+        if (e.target.classList.contains("active")) return;
+        setActiveButton(todayButton);
+        loadToday();
+    })
 
     const usersProjects = document.createElement("div");
     usersProjects.classList.add("users-projects");
     nav.appendChild(usersProjects);
 
-    
-    
-   defaultProjects.appendChild(inboxButton);
-
+    defaultProjects.appendChild(inboxButton);
+    defaultProjects.appendChild(todayButton);
    return nav;
 }
 
@@ -52,6 +61,8 @@ function setActiveButton(button) {
   
     button.classList.add("active");
 }
+
+
 
 function createMain() {
     const main = document.createElement("main");
