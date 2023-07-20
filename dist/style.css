@@ -80,15 +80,35 @@ nav{
     justify-content: center;
     align-items: center;
     width: 100%;
+    
     background-color: var(--white);
 }
+
 .inbox{
-   
-    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
     height: 80vh;
     background-color: var(--light-grey);
     border-radius: 8px;
 }
+
+.inbox > h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tasks-container{
+    border: solid 1px black;
+    width: 80%;
+    height: 80%;
+}
+
 footer{
     background-color: black;
     height: max(50px,5vh)
