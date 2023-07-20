@@ -22,7 +22,7 @@ function createNav() {
     const defaultProjects = document.createElement("div");
     defaultProjects.classList.add("deafult-projects");
     nav.appendChild(defaultProjects);
-//
+
     const inboxButton = document.createElement("button");
     inboxButton.classList.add("button-nav");
     inboxButton.textContent = "Inbox";
@@ -87,7 +87,15 @@ function setActiveButton(button) {
     button.classList.add("active");
 }
 
-
+/*
+function makeImage(imgName){
+    const img = document.createElement("img");
+    img.classList.add("button-img");
+    img.src= `media/svg/${imgName}.svg`;
+    img.alt =`${imgName}`;
+    return img;
+}
+*/
 
 function createMain() {
     const main = document.createElement("main");
