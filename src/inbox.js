@@ -5,11 +5,23 @@ function createInbox() {
     const title = document.createElement("h2");
     title.textContent = "Inbox";
 
-    const taskContainer = document.createElement("div");
-    taskContainer.classList.add("tasks-container")
+    /* Refactor*/
+    const taskManager = document.createElement("div");
+    taskManager.classList.add("task-manager");
 
+
+    const tasksContainer = document.createElement("div");
+    tasksContainer.classList.add("tasks-container");
+
+    const addTaskDiv = document.createElement("button");
+    addTaskDiv.classList.add("add-task-button");
+    addTaskDiv.textContent = "+";
+
+    taskManager.appendChild(tasksContainer);
+    taskManager.appendChild(addTaskDiv);
+    
     inbox.appendChild(title);
-    inbox.appendChild(taskContainer);
+    inbox.appendChild(taskManager);
     return inbox;
 }
 
