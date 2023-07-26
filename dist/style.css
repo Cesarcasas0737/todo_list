@@ -39,6 +39,7 @@ header{
 .main-wrapper{
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 nav{
@@ -104,7 +105,6 @@ nav{
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/*Refactor*/
 .task-manager{
     border: solid 1px black;
     width: 60%;

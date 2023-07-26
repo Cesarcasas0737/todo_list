@@ -5,7 +5,7 @@ function createInbox() {
     const title = document.createElement("h2");
     title.textContent = "Inbox";
 
-    /* Refactor*/
+    
     const taskManager = document.createElement("div");
     taskManager.classList.add("task-manager");
 
@@ -13,9 +13,15 @@ function createInbox() {
     const tasksContainer = document.createElement("div");
     tasksContainer.classList.add("tasks-container");
 
-    const addTaskDiv = document.createElement("button");
-    addTaskDiv.classList.add("add-task-button");
-    addTaskDiv.textContent = "+";
+    const addTaskDiv = document.createElement("div");
+    addTaskDiv.classList.add("add-task-div");
+    
+
+    const addTaskButton = document.createElement("button");
+    addTaskButton.classList.add("add-task-button")
+    addTaskButton.textContent = "+";
+
+    addTaskDiv.appendChild(addTaskButton);
 
     taskManager.appendChild(tasksContainer);
     taskManager.appendChild(addTaskDiv);
