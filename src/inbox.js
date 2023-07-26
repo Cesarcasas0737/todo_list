@@ -14,7 +14,7 @@ function createInbox() {
     tasksContainer.classList.add("tasks-container");
 
     const addTaskDiv = document.createElement("div");
-    addTaskDiv.classList.add("add-task-div");
+    addTaskDiv.setAttribute('id','addTaskDiv');
     
 
     const addTaskButton = document.createElement("button");
