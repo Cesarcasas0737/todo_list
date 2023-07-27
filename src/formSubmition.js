@@ -1,7 +1,5 @@
-// Function to add HTML content to the target div
 function addHTMLContent() {
-    // The HTML content you want to add
-    const htmlContent = `
+    const html = `
         <form id="new-task-form" >
 
             <div class="form-inputs-wrapper">
@@ -27,24 +25,7 @@ function addHTMLContent() {
             </div>
         </form>
     `;
-
-    // Get a reference to the target div
-    const targetDiv = document.getElementById('promptTaskDiv');
-
-
-    // Using DOM manipulation (preferred when adding many elements)
-    // Create a temporary container element to hold the new content
-    const tempContainer = document.createElement('div');
-    tempContainer.innerHTML = htmlContent;
-
-    // Append the children of the temp container to the target div
-    while (tempContainer.firstChild) {
-        targetDiv.appendChild(tempContainer.firstChild);
-    }
+    document.getElementById("promptTaskDiv").innerHTML = html
 }
-
-// Add event listener to the button to trigger adding content
-const addButton = document.getElementById('addContentButton');
-addButton.addEventListener('click', addHTMLContent);
 
 export default addHTMLContent;

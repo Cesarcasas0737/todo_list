@@ -1,3 +1,6 @@
+import addHTMLContent from "./formSubmition";
+
+//import addHTMLContent from "./formSubmition";
 function createInbox() {
     const inbox = document.createElement("div");
     inbox.classList.add("inbox");
@@ -21,6 +24,10 @@ function createInbox() {
     addTaskButton.classList.add("add-task-button")
     addTaskButton.setAttribute('id','addContentButton');
     addTaskButton.textContent = "+";
+    addTaskButton.addEventListener('click',function(){
+        addHTMLContent();
+    });
+
 
     promptTaskDiv.appendChild(addTaskButton);
 
