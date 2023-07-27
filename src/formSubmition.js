@@ -29,7 +29,7 @@ function addHTMLContent() {
     `;
 
     // Get a reference to the target div
-    const targetDiv = document.getElementsByClassName('add-task-div');
+    const targetDiv = document.getElementById('promptTaskDiv');
 
 
     // Using DOM manipulation (preferred when adding many elements)

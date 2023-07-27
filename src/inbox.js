@@ -13,18 +13,19 @@ function createInbox() {
     const tasksContainer = document.createElement("div");
     tasksContainer.classList.add("tasks-container");
 
-    const addTaskDiv = document.createElement("div");
-    addTaskDiv.setAttribute('id','addTaskDiv');
+    const promptTaskDiv = document.createElement("div");
+    promptTaskDiv.setAttribute('id','promptTaskDiv');
     
 
     const addTaskButton = document.createElement("button");
     addTaskButton.classList.add("add-task-button")
+    addTaskButton.setAttribute('id','addContentButton');
     addTaskButton.textContent = "+";
 
-    addTaskDiv.appendChild(addTaskButton);
+    promptTaskDiv.appendChild(addTaskButton);
 
     taskManager.appendChild(tasksContainer);
-    taskManager.appendChild(addTaskDiv);
+    taskManager.appendChild(promptTaskDiv);
     
     inbox.appendChild(title);
     inbox.appendChild(taskManager);
