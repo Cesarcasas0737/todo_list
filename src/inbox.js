@@ -1,6 +1,5 @@
-import addHTMLContent from "./formSubmition";
+import displayForm from "./displayForm";
 
-//import addHTMLContent from "./formSubmition";
 function createInbox() {
     const inbox = document.createElement("div");
     inbox.classList.add("inbox");
@@ -14,7 +13,7 @@ function createInbox() {
 
 
     const tasksContainer = document.createElement("div");
-    tasksContainer.classList.add("tasks-container");
+    tasksContainer.setAttribute('id','tasks-container');
 
     const promptTaskDiv = document.createElement("div");
     promptTaskDiv.setAttribute('id','promptTaskDiv');
@@ -25,7 +24,7 @@ function createInbox() {
     addTaskButton.setAttribute('id','addContentButton');
     addTaskButton.textContent = "+";
     addTaskButton.addEventListener('click',function(){
-        addHTMLContent();
+        displayForm();
     });
 
 

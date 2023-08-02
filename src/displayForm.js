@@ -1,4 +1,4 @@
-function addHTMLContent() {
+function displayForm() {
     const html = `
         <form id="new-task-form" >
 
@@ -20,12 +20,14 @@ function addHTMLContent() {
                 </select>
             </div>
             <div class="form-buttons row">
-                <button id="closeButton">close</button>
+                <button id="closeButton" >close</button>
                 <input type="submit">
             </div>
         </form>
     `;
     document.getElementById("promptTaskDiv").innerHTML = html
+
 }
 
-export default addHTMLContent;
+
+export default displayForm;

@@ -111,7 +111,7 @@ nav{
     height: 80%;
     background-color: var(--white);
 }
-.tasks-container{
+#tasks-container{
     display: flex;
     flex-direction: column;
     
@@ -121,7 +121,9 @@ nav{
     flex-grow: 1;
     overflow: auto;
 }
-
+#closeButton{
+    background-color: red;
+}
 .add-task-button{
     display: flex;
     flex-direction: row;
